@@ -4,8 +4,9 @@ from redis import StrictRedis
 class Config(object):
     """项目配置"""
 
-    DEBUG = True
+    # DEBUG = True
     SECRETY_KEY = 'sdfsfsdfds'
+
     # mysql
     SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/news'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -21,3 +22,19 @@ class Config(object):
     SESSION_USE_SIGNER = True  # 数字签名
     SESSION_PERMANENT = False  # 设置过期时间
     PERMANENT_SESSION_LIFETIME = 86400
+
+
+class DevelopementConfig(Config):
+    """开发环境"""
+    DEBUG = True
+
+
+class ProjectionConfig(Config):
+    """线上环境"""
+    DEBUG = False
+
+
+config = {
+    "developement": DevelopementConfig,
+    "projection": ProjectionConfig
+}
