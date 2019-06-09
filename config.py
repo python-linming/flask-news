@@ -3,9 +3,7 @@ from redis import StrictRedis
 
 class Config(object):
     """项目配置"""
-
-    # DEBUG = True
-    SECRETY_KEY = 'sdfsfsdfds'
+    SECRET_KEY = 'sdfsfsdfds'
 
     # mysql
     SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/news'
