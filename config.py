@@ -29,12 +29,12 @@ class DevelopementConfig(Config):
     DEBUG = True
 
 
-class ProjectionConfig(Config):
+class ProductionConfig(Config):
     """线上环境"""
     DEBUG = False
 
 
 config = {
     "developement": DevelopementConfig,
-    "projection": ProjectionConfig
+    "production": ProductionConfig
 }
