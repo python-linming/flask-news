@@ -24,7 +24,7 @@ class Config(object):
     SESSION_REDIS = StrictRedis(host=REDIS_HOST, port=REDIS_PORT)
     SESSION_USE_SIGNER = True  # 数字签名
     SESSION_PERMANENT = False  # 设置过期时间
-    PERMANENT_SESSION_LIFETIME = 86400 * 2
+    PERMANENT_SESSION_LIFETIME = 86400
 
 
 app = Flask(__name__)
